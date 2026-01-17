@@ -2,12 +2,18 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Briefcase, GraduationCap, Award } from 'lucide-react';
 
+import expSQA from '@/assets/exp-texinity.png';
+import expJunior from '@/assets/exp-techloyce.png';
+import expEducation from '@/assets/exp-education.png';
+import expCertification from '@/assets/exp-certification.png';
+
 const experiences = [
   {
     type: 'work',
     title: 'SQA Engineer',
     company: 'Aussource Enterprises',
     period: 'July 2024 – Present',
+    image: expSQA,
     description: [
       'Designed & executed test cases for iOS, Android, and web applications',
       'Logged & tracked defects in Azure DevOps with clear reproduction steps',
@@ -22,6 +28,7 @@ const experiences = [
     title: 'Junior SQA Manual/Automation',
     company: 'Aussource Enterprises',
     period: 'June 2023 – June 2024',
+    image: expJunior,
     description: [
       'Contributed to test planning, scenario creation, and scripting',
       'Integrated test automation scripts using Cypress',
@@ -35,6 +42,7 @@ const experiences = [
     title: 'BSCS',
     company: 'Arid University, Rawalpindi',
     period: '2018 – 2022',
+    image: expEducation,
     description: ['Bachelor of Science in Computer Science'],
   },
   {
@@ -42,6 +50,7 @@ const experiences = [
     title: 'Certifications',
     company: 'PSEB & PASHA',
     period: '2023',
+    image: expCertification,
     description: [
       'SQA (Automation) Certification',
       'Excellence Delivered - PSEB & PASHA',
@@ -118,10 +127,24 @@ const ExperienceSection = () => {
                     <div className={`glass-card rounded-2xl p-6 glow-hover ml-8 md:ml-0 ${
                       isLeft ? 'md:mr-0' : 'md:ml-0'
                     }`}>
-                      {/* Period Badge */}
-                      <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-mono mb-3">
-                        {exp.period}
-                      </span>
+                      {/* Experience Image */}
+                      <motion.div 
+                        className="relative w-full h-40 rounded-xl overflow-hidden mb-4"
+                        whileHover={{ scale: 1.02 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <img 
+                          src={exp.image} 
+                          alt={exp.title}
+                          className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent" />
+                        <div className="absolute bottom-3 left-3 right-3">
+                          <span className="inline-block px-3 py-1 rounded-full bg-primary/20 backdrop-blur-sm text-primary text-xs font-mono border border-primary/30">
+                            {exp.period}
+                          </span>
+                        </div>
+                      </motion.div>
                       
                       <h3 className="text-xl font-bold text-foreground mb-1">
                         {exp.title}
