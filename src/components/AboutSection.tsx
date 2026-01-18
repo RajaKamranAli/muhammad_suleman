@@ -77,7 +77,7 @@ const AboutSection = () => {
                 {'\n'}  <span className="text-primary">role</span>:{' '}
                 <span className="text-green-400">"SQA Engineer"</span>,
                 {'\n'}  <span className="text-primary">experience</span>:{' '}
-                <span className="text-yellow-400">"2+ years"</span>,
+                <span className="text-yellow-400">"2.5 years"</span>,
                 {'\n'}  <span className="text-primary">education</span>:{' '}
                 <span className="text-green-400">"BSCS - Arid University"</span>,
                 {'\n'}  <span className="text-primary">location</span>:{' '}
