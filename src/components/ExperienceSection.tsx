@@ -140,14 +140,10 @@ const ExperienceSection = () => {
               </motion.a>
             )}
             
-            <ul className={`space-y-2 text-sm text-muted-foreground ${
-              isLeft ? 'md:text-right' : 'text-left'
-            }`}>
+            <ul className="space-y-2 text-sm text-muted-foreground text-left">
               {exp.description.map((item: string, i: number) => (
                 <li key={i} className="flex items-start gap-2">
-                  <span className={`w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0 ${
-                    isLeft ? 'md:order-last md:ml-2' : ''
-                  }`} />
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
                   <span>{item}</span>
                 </li>
               ))}
