@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Briefcase, GraduationCap, Award } from 'lucide-react';
+import { Briefcase, GraduationCap, Award, ExternalLink } from 'lucide-react';
 
 import expSQA from '@/assets/exp-texinity.png';
 import expJunior from '@/assets/exp-techloyce.png';
@@ -14,6 +14,7 @@ const experiences = [
     company: 'Aussource Enterprises',
     period: 'July 2024 – Present',
     image: expSQA,
+    productLink: 'https://formpanda.com.au/',
     description: [
       'Designed & executed test cases for iOS, Android, and web applications',
       'Logged & tracked defects in Azure DevOps with clear reproduction steps',
@@ -26,9 +27,10 @@ const experiences = [
   {
     type: 'work',
     title: 'Junior SQA Manual/Automation',
-    company: 'Aussource Enterprises',
+    company: '3cix',
     period: 'June 2023 – June 2024',
     image: expJunior,
+    productLink: 'https://3cix.com/',
     description: [
       'Contributed to test planning, scenario creation, and scripting',
       'Integrated test automation scripts using Cypress',
@@ -149,9 +151,23 @@ const ExperienceSection = () => {
                       <h3 className="text-xl font-bold text-foreground mb-1">
                         {exp.title}
                       </h3>
-                      <p className="text-primary font-medium mb-4">
+                      <p className="text-primary font-medium mb-2">
                         {exp.company}
                       </p>
+                      
+                      {exp.productLink && (
+                        <motion.a
+                          href={exp.productLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-primary/10 text-primary text-sm font-mono mb-4 hover:bg-primary/20 transition-colors border border-primary/20"
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                        >
+                          <ExternalLink className="w-3.5 h-3.5" />
+                          Product Link
+                        </motion.a>
+                      )}
                       
                       <ul className={`space-y-2 text-sm text-muted-foreground ${
                         isLeft ? 'md:text-right' : 'text-left'

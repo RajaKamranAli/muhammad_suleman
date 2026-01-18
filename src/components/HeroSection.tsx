@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowDown, Mail, Linkedin, MapPin } from 'lucide-react';
 import profileImage from '@/assets/profile.png';
 
-const roles = ['SQA Engineer', 'Automation Specialist', 'Quality Advocate'];
+const roles = ['SQA Engineer'];
 
 const HeroSection = () => {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -82,7 +82,7 @@ const HeroSection = () => {
             transition={{ delay: 0.9 }}
             className="text-muted-foreground text-lg max-w-xl mx-auto lg:mx-0 mb-8"
           >
-            2+ years of experience ensuring high-quality software delivery. Expert in 
+            2.5 years of experience ensuring high-quality software delivery. Expert in 
             <span className="text-primary"> manual & automation testing</span>, API testing, and 
             <span className="text-primary"> performance optimization</span>.
           </motion.p>
@@ -171,7 +171,7 @@ const HeroSection = () => {
               transition={{ delay: 1.5 }}
               className="absolute -right-4 top-8 glass-card px-4 py-3 rounded-xl glow-border"
             >
-              <div className="text-2xl font-bold text-primary">2+</div>
+              <div className="text-2xl font-bold text-primary">2.5</div>
               <div className="text-xs text-muted-foreground">Years Exp.</div>
             </motion.div>
 
