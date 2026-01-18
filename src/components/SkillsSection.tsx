@@ -15,11 +15,11 @@ const skillCategories = [
   {
     title: 'Automation & Tools',
     skills: [
-      { name: 'Cypress', level: 60 },
       { name: 'Postman', level: 92 },
-      { name: 'JMeter', level: 80 },
       { name: 'Swagger', level: 88 },
+      { name: 'JMeter', level: 80 },
       { name: 'MySQL', level: 78 },
+      { name: 'Cypress', level: 60 },
     ],
   },
   {

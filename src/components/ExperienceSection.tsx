@@ -15,7 +15,7 @@ const workExperiences = [
     period: 'July 2024 – Present',
     image: expSQA,
     productLink: 'https://formpanda.com.au/',
-    projectDetails: 'Form Panda is an online platform used in Australia for managing solar energy installation jobs, documentation, and compliance workflows — primarily for solar retailers, installers, and trade specialists. The site supports job creation, scheduling, requirements tracking, and submission workflows related to solar panel installation projects.',
+    projectDetails: 'Form Panda is an online platform used in Australia for managing solar energy installation jobs, documentation, and compliance workflows — primarily for solar retailers, installers, and trade specialists. The site supports job creation, scheduling, requirements tracking, and submission workflows related to solar panel installation projects. It appears to be associated with STC (Small-scale Technology Certificates) reporting and compliance — which is a real requirement for solar installations under Australian renewable energy incentive schemes.',
     description: [
       'Designed & executed test cases for iOS, Android, and web applications',
       'Logged & tracked defects in Azure DevOps with clear reproduction steps',
